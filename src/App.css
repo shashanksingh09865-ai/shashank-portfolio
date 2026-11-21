@@ -2903,3 +2903,52 @@ section[id*="cert" i] button {
 .experience-proof-link:hover svg {
   transform: translate(3px, -3px);
 }
+
+/* About section profile photo - prevent unwanted cropping */
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+
+/* ABOUT SECTION - LARGE PROFILE PHOTO */
+
+.about-visual {
+  min-height: 660px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbit-center.profile-photo {
+  width: 460px !important;
+  max-width: 100% !important;
+  height: 560px !important;
+  padding: 7px !important;
+  border-radius: 25px !important;
+  overflow: hidden !important;
+  z-index: 5;
+  background: var(--lime);
+}
+
+.profile-photo img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 25% !important;
+  border-radius: 19px !important;
+}
+
+@media (max-width: 650px) {
+  .about-visual {
+    min-height: 490px !important;
+  }
+
+  .orbit-center.profile-photo {
+    width: 340px !important;
+    height: 430px !important;
+  }
+}
